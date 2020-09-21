@@ -91,7 +91,7 @@ class block_demo extends block_base {
         $this->content->text .= html_writer::empty_tag('br');
 
         // Optionally display a question with text entry box and button.
-        if ($this->config->enabletext == 'yes') {
+        if ($this->config && $this->config->enabletext == 'yes') {
 
             // Dislpay the question.
             $this->content->text .= html_writer::tag('p', $this->config->text);
